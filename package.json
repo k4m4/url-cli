@@ -1,0 +1,43 @@
+{
+  "name": "url-cli",
+  "version": "1.0.0",
+  "description": "URL encode & decode a string, right from your terminal.",
+  "license": "MIT",
+  "repository": "k4m4/url-cli",
+  "author": {
+    "name": "Nikolaos Kamarinakis",
+    "url": "https://nikolaskama.me",
+    "email": "nikolaskam@gmail.com"
+  },
+  "bin": {
+    "url": "cli.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "url",
+    "url-encoder",
+    "url-encoding",
+    "url-decoder",
+    "url-decoding",
+    "encoder",
+    "decoder"
+  ],
+  "files": [
+    "cli.js"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "execa": "^0.10.0"
+  },
+  "dependencies": {
+    "get-stdin": "^6.0.0",
+    "log-symbols": "^2.2.0",
+    "meow": "^4.0.0"
+  }
+}
