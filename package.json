@@ -10,7 +10,8 @@
     "email": "nikolaskam@gmail.com"
   },
   "bin": {
-    "url": "cli.js"
+    "url": "cli.js",
+    "urlencode": "cli.js"
   },
   "engines": {
     "node": ">=4"
