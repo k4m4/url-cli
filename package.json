@@ -16,7 +16,6 @@
   "engines": {
     "node": ">=4"
   },
-  "main": "cli.js",
   "scripts": {
     "test": "ava"
   },
