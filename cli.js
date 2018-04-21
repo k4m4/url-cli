@@ -28,7 +28,7 @@ const cli = meow(`
 const input = cli.input[0];
 
 function URLEncode (text) {
-	return encodeURI(text);
+	return encodeURIComponent(text);
 }
 
 function URLEncodedRegex (ciphertext) {
@@ -38,7 +38,7 @@ function URLEncodedRegex (ciphertext) {
 }
 
 function URLDecode (text) {
-  if (URLEncodedRegex(text)) return decodeURI(text);
+  if (URLEncodedRegex(text)) return decodeURIComponent(text);
   else return 'Ciphertext doesn\'t seem to be URL-encoded'
 }
 
