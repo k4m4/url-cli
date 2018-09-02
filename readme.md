@@ -21,6 +21,7 @@
     ~ ❯❯❯ echo [string] | url
   Options
         -d, --decode  Decode URL encoded string
+        -p, --plain   Display output without log symbols
   Examples
     ~ ❯❯❯ url "just 4n0ther URL enc0d3d $tr1ng"  
     ✔ just%204n0ther%20URL%20enc0d3d
