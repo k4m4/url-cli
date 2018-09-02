@@ -10,6 +10,7 @@ const cli = meow(`
 	  ~ ❯❯❯ echo [string] | url
 	Options
 		-d, --decode  Decode URL encoded string
+		-p, --plain   Display output without log symbols
 	Examples
 	  ~ ❯❯❯ url "just 4n0ther URL enc0d3d $tr1ng"
 	  ${logSymbols.success} just%204n0ther%20URL%20enc0d3d
@@ -20,6 +21,11 @@ const cli = meow(`
 		decode: {
 			type: 'boolean',
 			alias: 'd',
+			default: false
+		},
+		plain: {
+			type: 'boolean',
+			alias: 'p',
 			default: false
 		}
 	}
@@ -44,9 +50,11 @@ function URLDecode (text) {
 
 function display (plaintext) {
 	if (plaintext != 'Ciphertext doesn\'t seem to be URL-encoded') {
-		console.log(`${logSymbols.success} ` + plaintext)
+		const leading = (cli.flags["plain"]) ? `` : `${logSymbols.success} `
+		console.log(leading + plaintext)
 	} else {
-		console.log(`${logSymbols.error} Ciphertext doesn\'t seem to be URL-encoded`);
+		const leading = (cli.flags["plain"]) ? `` : `${logSymbols.error} `
+		console.log(leading + `Ciphertext doesn\'t seem to be URL-encoded`);
 		process.exit(1);
 	}
 }
